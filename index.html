@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VRINDA AI ANALYTICS — Smart MIS Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <canvas id="particleCanvas"></canvas>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo"><span class="logo-v">VRINDA</span>AI ANALYTICS<span class="logo-sub"></span></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Work</a></li>
+        <li><a href="#workflow">Process</a></li>
+        <li><a href="#compare">Why Us</a></li>
+        <li><a href="#founder">About</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title">
+        We Don't Just Build<br/>
+        <span class="typewriter-wrap"><span id="typewriter" class="typewriter"></span><span class="cursor-blink">|</span></span><br/>
+        <span class="hero-title-sub">We Build Decision Systems</span>
+      </h1>
+      <p class="hero-desc">Smart MIS solutions — automated reporting, real-time dashboards, and data pipelines that help organizations move from spreadsheets to strategic clarity.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><span>Get Free Consultation</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#industries" class="btn-outline"><span>View Our Work</span><i class="fas fa-chart-bar"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="stat-num">70<span class="stat-unit">%</span></span><span class="stat-label">Manual Work Reduced</span></div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">5<span class="stat-unit">+</span></span><span class="stat-label">Years Experience</span></div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">12<span class="stat-unit">+</span></span><span class="stat-label">Industries Served</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="dashboard-mockup">
+        <div class="mockup-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="mockup-title">VRINDA · Live MIS Dashboard</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mock-kpis">
+            <div class="mock-kpi"><span class="kpi-val">₹48.2L</span><span class="kpi-lbl">Revenue</span><span class="kpi-up">↑ 12%</span></div>
+            <div class="mock-kpi"><span class="kpi-val">1,284</span><span class="kpi-lbl">Orders</span><span class="kpi-up">↑ 8%</span></div>
+            <div class="mock-kpi"><span class="kpi-val">97.4%</span><span class="kpi-lbl">SLA Met</span><span class="kpi-up">↑ 3%</span></div>
+          </div>
+          <div class="mock-chart">
+            <div class="chart-bars">
+              <div class="bar" style="--h:55%"></div><div class="bar" style="--h:72%"></div>
+              <div class="bar" style="--h:48%"></div><div class="bar" style="--h:88%"></div>
+              <div class="bar" style="--h:65%"></div><div class="bar" style="--h:91%"></div>
+              <div class="bar active" style="--h:78%"></div>
+            </div>
+            <div class="chart-line-svg">
+              <svg viewBox="0 0 300 80" preserveAspectRatio="none">
+                <polyline class="line-glow" points="0,60 50,40 100,52 150,20 200,35 250,18 300,28"/>
+                <polyline class="line-main" points="0,60 50,40 100,52 150,20 200,35 250,18 300,28"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mock-table">
+            <div class="mock-row header"><span>Department</span><span>Status</span><span>KPI</span></div>
+            <div class="mock-row"><span>Sales</span><span class="tag green">On Track</span><span>94%</span></div>
+            <div class="mock-row"><span>Operations</span><span class="tag blue">Review</span><span>81%</span></div>
+            <div class="mock-row"><span>Billing</span><span class="tag green">On Track</span><span>99%</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card fc1 reveal-float"><i class="fas fa-certificate"></i> Microsoft Certified</div>
+      <div class="floating-card fc2 reveal-float"><i class="fas fa-chart-line"></i> 70% Manual Work Reduced</div>
+      <div class="floating-card fc3 reveal-float"><i class="fas fa-trophy"></i> 5 Years · 12+ Industries</div>
+    </div>
+    <div class="scroll-hint"><span>Scroll to explore</span><div class="scroll-arrow"></div></div>
+  </section>
+
+  <!-- PROBLEM vs SOLUTION -->
+  <section class="problem-solution" id="about">
+    <div class="section-label reveal">THE CHALLENGE</div>
+    <h2 class="section-title reveal">Most Organizations Are Still<br/><span class="highlight">Flying Blind</span></h2>
+    <div class="ps-grid">
+      <div class="ps-card problem reveal-left">
+        <div class="ps-card-header"><span class="ps-icon danger"><i class="fas fa-times-circle"></i></span><h3>The Problem</h3></div>
+        <ul class="ps-list">
+          <li><i class="fas fa-exclamation-triangle"></i> Manual Excel-based reporting — slow and error-prone</li>
+          <li><i class="fas fa-exclamation-triangle"></i> Delays in report generation — hours or even days</li>
+          <li><i class="fas fa-exclamation-triangle"></i> Data scattered across departments with no sync</li>
+          <li><i class="fas fa-exclamation-triangle"></i> No centralized system — everyone has their own version</li>
+          <li><i class="fas fa-exclamation-triangle"></i> Zero real-time visibility for management</li>
+        </ul>
+        <div class="ps-result danger-box">Slow decisions. Operational inefficiency. Revenue loss.</div>
+      </div>
+      <div class="ps-arrow reveal"><i class="fas fa-arrow-right"></i></div>
+      <div class="ps-card solution reveal-right">
+        <div class="ps-card-header"><span class="ps-icon success"><i class="fas fa-check-circle"></i></span><h3>VRINDA Solution</h3></div>
+        <ul class="ps-list">
+          <li><i class="fas fa-check"></i> Automated reports generated on schedule — zero manual effort</li>
+          <li><i class="fas fa-check"></i> Real-time dashboards accessible anywhere, anytime</li>
+          <li><i class="fas fa-check"></i> Single source of truth — clean, validated, centralized data</li>
+          <li><i class="fas fa-check"></i> KPI tracking across every department in one view</li>
+          <li><i class="fas fa-check"></i> Decision-ready reports delivered every morning</li>
+        </ul>
+        <div class="ps-result success-box">Fast decisions. Operational clarity. Business growth.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-label reveal">WHAT WE DO</div>
+    <h2 class="section-title reveal">Services That <span class="highlight">Transform Data</span><br/>Into Decisions</h2>
+    <div class="services-grid">
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-table-list"></i></div><h3>MIS Reporting</h3><p>Daily, weekly &amp; monthly MIS reports — automated, accurate, and delivered on time. No manual effort required.</p><div class="sc-tags"><span>Excel</span><span>SQL</span><span>Power BI</span></div></div>
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-chart-pie"></i></div><h3>Dashboard Development</h3><p>Interactive, real-time dashboards that give management instant visibility across all departments and KPIs.</p><div class="sc-tags"><span>Power BI</span><span>Tableau</span><span>Looker</span></div></div>
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-broom"></i></div><h3>Data Cleaning</h3><p>We clean, validate, and structure raw data from any source — ERP, CRM, Excel, or custom systems.</p><div class="sc-tags"><span>Python</span><span>SQL</span><span>Excel</span></div></div>
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-robot"></i></div><h3>Report Automation</h3><p>End-to-end automation of your reporting pipeline — from data extraction to formatted delivery.</p><div class="sc-tags"><span>Python</span><span>Macros</span><span>Scheduler</span></div></div>
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-envelope-open-text"></i></div><h3>Email Reporting</h3><p>Automated email delivery of formatted reports to management every morning before they start their day.</p><div class="sc-tags"><span>Python</span><span>SMTP</span><span>Scheduled</span></div></div>
+      <div class="service-card tilt-card reveal"><div class="sc-icon"><i class="fas fa-database"></i></div><h3>Data Management</h3><p>Structured data pipelines, modeling, and management that ensure accuracy and consistency across your organization.</p><div class="sc-tags"><span>SQL</span><span>Google Sheets</span><span>ETL</span></div></div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries" id="industries">
+    <div class="section-label reveal">OUR WORK</div>
+    <h2 class="section-title reveal">Dashboards Built Across<br/><span class="highlight">12 Industries</span></h2>
+    <p class="section-sub reveal">Real dashboards. Real results. Built for real business decisions.</p>
+    <div class="industry-grid">
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-sales.png" alt="Sales"/><div class="industry-overlay"><p>Invoice tracking, payment status, pending dues &amp; region-wise performance.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-shopping-cart"></i></span><h4>Sales &amp; Retail Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-marketing.png" alt="Marketing"/><div class="industry-overlay"><p>Campaign ROI, lead tracking, customer analysis &amp; conversion funnels.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-bullhorn"></i></span><h4>Marketing &amp; Advertising Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-finance.png" alt="Finance"/><div class="industry-overlay"><p>Billing, invoicing, revenue tracking &amp; financial performance monitoring.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-landmark"></i></span><h4>Finance &amp; Banking Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-supply-chain.png" alt="Supply Chain"/><div class="industry-overlay"><p>Orders, deliveries, dispatch tracking &amp; logistics performance KPIs.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-truck"></i></span><h4>Supply Chain &amp; Logistics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-healthcare.png" alt="Healthcare"/><div class="industry-overlay"><p>Patient data, service tracking, SLA monitoring &amp; operational analytics.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-heartbeat"></i></span><h4>Healthcare Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-ecommerce.png" alt="Ecommerce"/><div class="industry-overlay"><p>Orders, returns, customer behavior, revenue &amp; product performance dashboards.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-store"></i></span><h4>E-commerce Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-education.png" alt="Education"/><div class="industry-overlay"><p>Student performance, attendance tracking &amp; institutional reporting systems.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-graduation-cap"></i></span><h4>Education Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-manufacturing.png" alt="Manufacturing"/><div class="industry-overlay"><p>Production reports, defect analysis, machine downtime &amp; yield tracking.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-industry"></i></span><h4>Manufacturing Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-mis.png" alt="MIS"/><div class="industry-overlay"><p>Centralized MIS dashboards covering all departments in one unified view.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-layer-group"></i></span><h4>Business / MIS Reporting</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-social-media.png" alt="Social Media"/><div class="industry-overlay"><p>Engagement metrics, reach, follower growth &amp; content performance analytics.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-share-alt"></i></span><h4>Social Media Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-food.png" alt="Food"/><div class="industry-overlay"><p>Sales by menu, peak hours, customer trends &amp; restaurant performance KPIs.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-utensils"></i></span><h4>Food &amp; Restaurant Analytics</h4></div></div>
+      <div class="industry-card tilt-card reveal"><div class="industry-img-wrap"><img src="images/dash-hr.png" alt="HR"/><div class="industry-overlay"><p>Employee performance, attrition tracking, recruitment analytics &amp; workforce insights.</p></div></div><div class="industry-info"><span class="industry-icon"><i class="fas fa-users"></i></span><h4>HR Analytics</h4></div></div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section class="workflow" id="workflow">
+    <div class="section-label reveal">HOW WE WORK</div>
+    <h2 class="section-title reveal">From Raw Data to<br/><span class="highlight">Management Insight</span></h2>
+    <div class="workflow-steps">
+      <div class="wf-step reveal"><div class="wf-num">01</div><div class="wf-icon"><i class="fas fa-database"></i></div><h4>Data Collection</h4><p>We gather data from Excel, CRM, ERP, or any custom source your organization uses.</p></div>
+      <div class="wf-step reveal"><div class="wf-num">02</div><div class="wf-icon"><i class="fas fa-broom"></i></div><h4>Cleaning &amp; Validation</h4><p>Every data point is cleaned, validated, and checked for accuracy before processing.</p></div>
+      <div class="wf-step reveal"><div class="wf-num">03</div><div class="wf-icon"><i class="fas fa-sitemap"></i></div><h4>Structuring &amp; Modeling</h4><p>Data is structured into logical models that power fast, reliable reporting.</p></div>
+      <div class="wf-step reveal"><div class="wf-num">04</div><div class="wf-icon"><i class="fas fa-chart-bar"></i></div><h4>MIS Report Creation</h4><p>Reports are built with precision — formatted, branded, and decision-ready.</p></div>
+      <div class="wf-step reveal"><div class="wf-num">05</div><div class="wf-icon"><i class="fas fa-tachometer-alt"></i></div><h4>Dashboard Development</h4><p>Interactive dashboards built in Power BI, Tableau, or Looker Studio.</p></div>
+      <div class="wf-step reveal"><div class="wf-num">06</div><div class="wf-icon"><i class="fas fa-robot"></i></div><h4>Automation &amp; Delivery</h4><p>Reports are automated and delivered to management on schedule — every single day.</p></div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="compare" id="compare">
+    <div class="section-label reveal">WHY CHOOSE US</div>
+    <h2 class="section-title reveal">Agency vs. Hiring<br/><span class="highlight">An MIS Analyst</span></h2>
+    <div class="compare-grid">
+      <div class="compare-card bad reveal-left">
+        <div class="compare-header"><i class="fas fa-user-times"></i><h3>Hiring an MIS Analyst</h3></div>
+        <ul>
+          <li><i class="fas fa-times"></i> Limited to one person's skillset</li>
+          <li><i class="fas fa-times"></i> Dependency &amp; single point of failure</li>
+          <li><i class="fas fa-times"></i> Fixed cost: ₹40K–₹60K/month</li>
+          <li><i class="fas fa-times"></i> Training and onboarding required</li>
+          <li><i class="fas fa-times"></i> Mostly manual, repetitive work</li>
+          <li><i class="fas fa-times"></i> No scalability — bottleneck as you grow</li>
+        </ul>
+        <div class="compare-note danger-note">Don't just hire someone to report your data — <strong>partner with experts who can grow your business using data.</strong></div>
+      </div>
+      <div class="compare-vs reveal">VS</div>
+      <div class="compare-card good reveal-right">
+        <div class="compare-header"><i class="fas fa-building"></i><h3>VRINDA AI ANALYTICS</h3></div>
+        <ul>
+          <li><i class="fas fa-check"></i> Multi-skilled: Excel + SQL + BI Tools + Python</li>
+          <li><i class="fas fa-check"></i> Automated systems — not manual work</li>
+          <li><i class="fas fa-check"></i> Cost-effective &amp; flexible pricing</li>
+          <li><i class="fas fa-check"></i> Ready to deploy — no training needed</li>
+          <li><i class="fas fa-check"></i> Fully automated, scalable pipelines</li>
+          <li><i class="fas fa-check"></i> Grows with your business — unlimited scale</li>
+        </ul>
+        <div class="compare-note">You don't hire a person — <strong>you get a complete MIS system.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="tools" id="tools">
+    <div class="section-label reveal">TECH STACK</div>
+    <h2 class="section-title reveal">Industry-Standard <span class="highlight">Tools &amp; Technologies</span></h2>
+    <div class="tools-grid">
+      <div class="tool-badge tilt-card reveal"><i class="fas fa-file-excel"></i><span>Excel</span><p>Advanced reporting &amp; dashboards</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fas fa-chart-bar"></i><span>Power BI</span><p>Interactive dashboards</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fas fa-chart-area"></i><span>Tableau</span><p>Data visualization</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fas fa-eye"></i><span>Looker Studio</span><p>Google-powered BI</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fas fa-server"></i><span>SQL</span><p>Data extraction &amp; structuring</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fab fa-python"></i><span>Python</span><p>Automation &amp; processing</p></div>
+      <div class="tool-badge tilt-card reveal"><i class="fab fa-google"></i><span>Google Sheets</span><p>Cloud-based reporting</p></div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder" id="founder">
+    <div class="section-label reveal">THE FOUNDER</div>
+    <div class="founder-grid">
+      <div class="founder-img-wrap reveal-left">
+        <div class="founder-img-glow"></div>
+        <img src="images/founder.jpg.jpg" alt="Biswajeet Prasad" class="founder-img"/>
+        <div class="founder-badge"><i class="fas fa-certificate"></i> Microsoft Certified</div>
+      </div>
+      <div class="founder-info reveal-right">
+        <h2>Biswajeet Prasad</h2>
+        <p class="founder-role">Founder · Data Analyst · MIS Specialist</p>
+        <p class="founder-bio">Microsoft-certified Data Analyst with 5+ years of hands-on industry experience building MIS systems, dashboards, and data pipelines for large-scale organizations. I started VRINDA AI ANALYTICS to bring enterprise-grade data intelligence to businesses of every size.</p>
+        <div class="founder-worked">
+          <span class="fw-label">Previously worked with:</span>
+          <div class="fw-companies">
+            <div class="fw-company"><i class="fas fa-industry"></i> Tata Steel</div>
+            <div class="fw-company"><i class="fas fa-laptop-code"></i> TCS</div>
+            <div class="fw-company"><i class="fas fa-chart-line"></i> Akshipi Solutions</div>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/datawithbiswajeet/" target="_blank" class="btn-linkedin"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="impact" id="impact">
+    <div class="impact-inner reveal">
+      <h2>Ready to Transform Your<br/><span class="highlight">Data Into Decisions?</span></h2>
+      <p>Join organizations that have eliminated manual reporting, gained real-time visibility, and made faster, smarter decisions.</p>
+      <div class="impact-stats">
+        <div class="is"><span>70%</span><p>Reduction in manual work</p></div>
+        <div class="is"><span>100%</span><p>Automated delivery</p></div>
+        <div class="is"><span>12+</span><p>Industries served</p></div>
+        <div class="is"><span>5+</span><p>Years of experience</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-label reveal">GET IN TOUCH</div>
+    <h2 class="section-title reveal">Let's Turn Your<br/><span class="highlight">Data Into Growth</span></h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <span>Email Us</span>
+            <a href="mailto:vrindaaianalytics@gmail.com">vrindaaianalytics@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <span>WhatsApp Us</span>
+            <a href="https://wa.me/916204829055?text=Hi%20Biswajeet%2C%20I%20am%20interested%20in%20your%20MIS%20services.%20Can%20we%20connect%3F" target="_blank">+91 6204829055</a>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <span>Call Us</span>
+            <a href="tel:+916204829055">+91 6204829055</a>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fas fa-globe"></i></div>
+          <div>
+            <span>Website</span>
+            <a href="https://vrindaaianalytics.vercel.app" target="_blank">vrindaaianalytics.vercel.app</a>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
+          <div>
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/datawithbiswajeet/" target="_blank">datawithbiswajeet</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FORMSPREE form — submissions go to vrindaaianalytics@gmail.com -->
+      <form class="contact-form reveal-right" id="contactForm"
+            action="https://formspree.io/f/xojkgaol"
+            method="POST">
+
+        <input type="hidden" name="_subject" value="New Enquiry from VRINDA AI ANALYTICS Website"/>
+
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required/>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required/>
+        </div>
+        <div class="form-group">
+          <input type="text" name="company" placeholder="Company / Organization"/>
+        </div>
+        <div class="form-group">
+          <select name="service">
+            <option value="" disabled selected>Select Service Needed</option>
+            <option>MIS Reporting</option>
+            <option>Dashboard Development</option>
+            <option>Data Cleaning</option>
+            <option>Report Automation</option>
+            <option>Email Reporting System</option>
+            <option>Full MIS System</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Tell us about your data challenges..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="logo-v">VRINDA</span>AI ANALYTICS<span class="logo-sub"></span></div>
+      <p class="footer-tagline">We don't just create reports — we build systems that drive decisions.</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#industries">Work</a>
+        <a href="#workflow">Process</a>
+        <a href="#founder">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 VRINDA AI ANALYTICS. All rights reserved.</span>
+        <span>Built by Biswajeet Prasad</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
