@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("Yon7359ahO5qS3Yy7");</script>
 </head>
 <body>
 
@@ -60,9 +62,9 @@
         </div>
         <div class="mockup-body">
           <div class="mock-kpis">
-            <div class="mock-kpi"><span class="kpi-val">₹48.2L</span><span class="kpi-lbl">Revenue</span><span class="kpi-up">↑ 12%</span></div>
-            <div class="mock-kpi"><span class="kpi-val">1,284</span><span class="kpi-lbl">Orders</span><span class="kpi-up">↑ 8%</span></div>
-            <div class="mock-kpi"><span class="kpi-val">97.4%</span><span class="kpi-lbl">SLA Met</span><span class="kpi-up">↑ 3%</span></div>
+            <div class="mock-kpi"><span class="kpi-val">&#8377;48.2L</span><span class="kpi-lbl">Revenue</span><span class="kpi-up">&#8593; 12%</span></div>
+            <div class="mock-kpi"><span class="kpi-val">1,284</span><span class="kpi-lbl">Orders</span><span class="kpi-up">&#8593; 8%</span></div>
+            <div class="mock-kpi"><span class="kpi-val">97.4%</span><span class="kpi-lbl">SLA Met</span><span class="kpi-up">&#8593; 3%</span></div>
           </div>
           <div class="mock-chart">
             <div class="chart-bars">
@@ -183,7 +185,7 @@
         <ul>
           <li><i class="fas fa-times"></i> Limited to one person's skillset</li>
           <li><i class="fas fa-times"></i> Dependency &amp; single point of failure</li>
-          <li><i class="fas fa-times"></i> Fixed cost: ₹40K–₹60K/month</li>
+          <li><i class="fas fa-times"></i> Fixed cost: &#8377;40K&#8211;&#8377;60K/month</li>
           <li><i class="fas fa-times"></i> Training and onboarding required</li>
           <li><i class="fas fa-times"></i> Mostly manual, repetitive work</li>
           <li><i class="fas fa-times"></i> No scalability — bottleneck as you grow</li>
@@ -267,67 +269,41 @@
     <h2 class="section-title reveal">Let's Turn Your<br/><span class="highlight">Data Into Growth</span></h2>
     <div class="contact-grid">
       <div class="contact-info reveal-left">
-
         <div class="ci-item">
           <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-          <div>
-            <span>Email Us</span>
-            <a href="mailto:vrindaaianalytics@gmail.com">vrindaaianalytics@gmail.com</a>
-          </div>
+          <div><span>Email Us</span><a href="mailto:vrindaaianalytics@gmail.com">vrindaaianalytics@gmail.com</a></div>
         </div>
-
         <div class="ci-item">
           <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
-          <div>
-            <span>WhatsApp Us</span>
-            <a href="https://wa.me/916204829055?text=Hi%20Biswajeet%2C%20I%20am%20interested%20in%20your%20MIS%20services.%20Can%20we%20connect%3F" target="_blank">+91 6204829055</a>
-          </div>
+          <div><span>WhatsApp Us</span><a href="https://wa.me/916204829055?text=Hi%20Biswajeet%2C%20I%20am%20interested%20in%20your%20MIS%20services.%20Can%20we%20connect%3F" target="_blank">+91 6204829055</a></div>
         </div>
-
         <div class="ci-item">
           <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
-          <div>
-            <span>Call Us</span>
-            <a href="tel:+916204829055">+91 6204829055</a>
-          </div>
+          <div><span>Call Us</span><a href="tel:+916204829055">+91 6204829055</a></div>
         </div>
-
         <div class="ci-item">
           <div class="ci-icon"><i class="fas fa-globe"></i></div>
-          <div>
-            <span>Website</span>
-            <a href="https://vrindaaianalytics.vercel.app" target="_blank">vrindaaianalytics.vercel.app</a>
-          </div>
+          <div><span>Website</span><a href="https://vrindaaianalytics.vercel.app" target="_blank">vrindaaianalytics.vercel.app</a></div>
         </div>
-
         <div class="ci-item">
           <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
-          <div>
-            <span>LinkedIn</span>
-            <a href="https://www.linkedin.com/in/datawithbiswajeet/" target="_blank">datawithbiswajeet</a>
-          </div>
+          <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/datawithbiswajeet/" target="_blank">datawithbiswajeet</a></div>
         </div>
-
       </div>
 
-      <!-- FORMSPREE form — submissions go to vrindaaianalytics@gmail.com -->
-      <form class="contact-form reveal-right" id="contactForm"
-            action="https://formspree.io/f/xojkgaol"
-            method="POST">
-
-        <input type="hidden" name="_subject" value="New Enquiry from VRINDA AI ANALYTICS Website"/>
-
+      <!-- EmailJS Form -->
+      <form class="contact-form reveal-right" id="contactForm">
         <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required/>
+          <input type="text" id="ejs_name" placeholder="Your Name" required/>
         </div>
         <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required/>
+          <input type="email" id="ejs_email" placeholder="Your Email" required/>
         </div>
         <div class="form-group">
-          <input type="text" name="company" placeholder="Company / Organization"/>
+          <input type="text" id="ejs_company" placeholder="Company / Organization"/>
         </div>
         <div class="form-group">
-          <select name="service">
+          <select id="ejs_service">
             <option value="" disabled selected>Select Service Needed</option>
             <option>MIS Reporting</option>
             <option>Dashboard Development</option>
@@ -338,12 +314,13 @@
           </select>
         </div>
         <div class="form-group">
-          <textarea name="message" placeholder="Tell us about your data challenges..." rows="4"></textarea>
+          <textarea id="ejs_message" placeholder="Tell us about your data challenges..." rows="4"></textarea>
         </div>
-        <button type="submit" class="btn-primary full">
+        <button type="submit" class="btn-primary full" id="submitBtn">
           <span>Send Message</span>
           <i class="fas fa-paper-plane"></i>
         </button>
+        <div id="formMsg" style="display:none; text-align:center; margin-top:12px; font-size:15px; font-family:'Rajdhani',sans-serif; font-weight:600; padding:10px; border-radius:8px;"></div>
       </form>
     </div>
   </section>
@@ -361,11 +338,18 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 VRINDA AI ANALYTICS. All rights reserved.</span>
+        <span>&#169; 2025 VRINDA AI ANALYTICS. All rights reserved.</span>
         <span>Built by Biswajeet Prasad</span>
       </div>
     </div>
   </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/916204829055?text=Hi%20Biswajeet%2C%20I%20am%20interested%20in%20your%20MIS%20services.%20Can%20we%20connect%3F"
+     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with us!</span>
+  </a>
 
   <script src="script.js"></script>
 </body>
