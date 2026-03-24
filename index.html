@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init("Yon7359ahO5qS3Yy7");</script>
 </head>
 <body>
 
@@ -19,7 +17,7 @@
   <!-- NAV -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <div class="nav-logo"><span class="logo-v">V</span>RINDA<span class="logo-sub">AI ANALYTICS</span></div>
+      <div class="nav-logo"><span class="logo-v">VRINDA</span>AI ANALYTICS<span class="logo-sub"></span></div>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#industries">Work</a></li>
@@ -266,7 +264,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="section-label reveal">GET IN TOUCH</div>
-    <h2 class="section-title reveal">Let's Build Your<br/><span class="highlight">MIS System</span></h2>
+    <h2 class="section-title reveal">Let's Turn Your<br/><span class="highlight">Data Into Growth</span></h2>
     <div class="contact-grid">
       <div class="contact-info reveal-left">
 
@@ -274,7 +272,7 @@
           <div class="ci-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <span>Email Us</span>
-            <a href="/cdn-cgi/l/email-protection#3f494d56515b5e5e565e515e53464b565c4c7f58525e5653115c5052"><span class="__cf_email__" data-cfemail="bfc9cdd6d1dbdeded6ded1ded3c6cbd6dcccffd8d2ded6d391dcd0d2">[email&#160;protected]</span></a>
+            <a href="mailto:vrindaaianalytics@gmail.com">vrindaaianalytics@gmail.com</a>
           </div>
         </div>
 
@@ -312,19 +310,24 @@
 
       </div>
 
-      <!-- EmailJS form — submissions go to vrindaaianalytics@gmail.com -->
-      <form class="contact-form reveal-right" id="contactForm">
+      <!-- FORMSPREE form — submissions go to vrindaaianalytics@gmail.com -->
+      <form class="contact-form reveal-right" id="contactForm"
+            action="https://formspree.io/f/xojkgaol"
+            method="POST">
+
+        <input type="hidden" name="_subject" value="New Enquiry from VRINDA AI ANALYTICS Website"/>
+
         <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Your Name" required/>
+          <input type="text" name="name" placeholder="Your Name" required/>
         </div>
         <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your Email" required/>
+          <input type="email" name="email" placeholder="Your Email" required/>
         </div>
         <div class="form-group">
-          <input type="text" id="company" name="company" placeholder="Company / Organization"/>
+          <input type="text" name="company" placeholder="Company / Organization"/>
         </div>
         <div class="form-group">
-          <select id="service" name="service">
+          <select name="service">
             <option value="" disabled selected>Select Service Needed</option>
             <option>MIS Reporting</option>
             <option>Dashboard Development</option>
@@ -335,13 +338,12 @@
           </select>
         </div>
         <div class="form-group">
-          <textarea id="message" name="message" placeholder="Tell us about your data challenges..." rows="4"></textarea>
+          <textarea name="message" placeholder="Tell us about your data challenges..." rows="4"></textarea>
         </div>
-        <button type="submit" class="btn-primary full" id="submitBtn">
+        <button type="submit" class="btn-primary full">
           <span>Send Message</span>
           <i class="fas fa-paper-plane"></i>
         </button>
-        <div id="formMsg" style="display:none; text-align:center; margin-top:12px; font-size:14px; font-family:'Rajdhani',sans-serif; font-weight:600;"></div>
       </form>
     </div>
   </section>
@@ -349,7 +351,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-logo"><span class="logo-v">V</span>RINDA <span class="logo-sub">AI ANALYTICS</span></div>
+      <div class="footer-logo"><span class="logo-v">VRINDA</span>AI ANALYTICS<span class="logo-sub"></span></div>
       <p class="footer-tagline">We don't just create reports — we build systems that drive decisions.</p>
       <div class="footer-links">
         <a href="#services">Services</a>
@@ -365,6 +367,6 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/916204829055?text=Hi%20Biswajeet%2C%20I%20am%20interested%20in%20your%20MIS%20services.%20Can%20we%20connect%3F"
-     class="whatsapp-float" target="_blank" title="Chat on WhatsA
+  <script src="script.js"></script>
+</body>
+</html>

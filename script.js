@@ -175,59 +175,16 @@ function vrindaInit() {
   });
 
   /* ══════════════════════════════════════
-     9. CONTACT FORM — EmailJS
+     9. CONTACT FORM
   ══════════════════════════════════════ */
-  var form      = document.getElementById('contactForm');
-  var formMsg   = document.getElementById('formMsg');
-  var submitBtn = document.getElementById('submitBtn');
-
+  var form=document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-
-      /* loading state */
-      submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
-      submitBtn.disabled  = true;
-      submitBtn.style.opacity = '0.8';
-
-      /* collect values */
-      var params = {
-        name:    document.getElementById('name').value,
-        email:   document.getElementById('email').value,
-        company: document.getElementById('company').value || 'Not provided',
-        service: document.getElementById('service').value || 'Not selected',
-        message: document.getElementById('message').value
-      };
-
-      /* send via EmailJS */
-      emailjs.send('service_kjgvh4l', 'template_e42goq1', params)
-        .then(function() {
-          submitBtn.innerHTML        = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
-          submitBtn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-          submitBtn.style.boxShadow  = '0 0 30px rgba(34,197,94,0.4)';
-          submitBtn.style.opacity    = '1';
-          submitBtn.disabled         = false;
-          formMsg.style.display      = 'block';
-          formMsg.style.color        = '#22c55e';
-          formMsg.textContent        = 'Thank you! We will get back to you within 24 hours.';
-          form.reset();
-          setTimeout(function() {
-            submitBtn.innerHTML        = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
-            submitBtn.style.background = '';
-            submitBtn.style.boxShadow  = '';
-            formMsg.style.display      = 'none';
-          }, 4000);
-        })
-        .catch(function(error) {
-          submitBtn.innerHTML        = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
-          submitBtn.style.background = '';
-          submitBtn.disabled         = false;
-          submitBtn.style.opacity    = '1';
-          formMsg.style.display      = 'block';
-          formMsg.style.color        = '#ef4444';
-          formMsg.textContent        = 'Something went wrong. Please email us at vrindaaianalytics@gmail.com';
-          console.error('EmailJS error:', error);
-        });
+      var btn=form.querySelector('button[type="submit"]'), orig=btn.innerHTML;
+      btn.innerHTML='<span>Message Sent!</span> ✓';
+      btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+      setTimeout(function(){ btn.innerHTML=orig; btn.style.background=''; form.reset(); }, 3000);
     });
   }
 
