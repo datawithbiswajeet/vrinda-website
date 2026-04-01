@@ -328,6 +328,8 @@ section {
   white-space: nowrap;
   font-size: clamp(22px, 3.5vw, 54px);
   font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .typewriter-wrap {
   display: flex;
@@ -1358,7 +1360,7 @@ section {
   .hero-content { max-width: 100%; }
   .hero-title { font-size: clamp(22px, 5vw, 40px); }
   .hero-line1 { font-size: clamp(22px, 5vw, 40px); }
-  .hero-title-sub { font-size: clamp(20px, 5vw, 42px); }
+  .hero-title-sub { font-size: clamp(20px, 5vw, 42px); white-space: normal; word-break: normal; }
   #typewriter { font-size: clamp(22px, 5vw, 40px); }
   .cursor-blink { font-size: clamp(22px, 5vw, 40px); }
   .hero-badge { font-size: 11px; padding: 6px 14px; }
@@ -1431,7 +1433,7 @@ section {
   .hero { padding-top: 90px; padding-bottom: 50px; }
   .hero-title { font-size: clamp(18px, 6vw, 32px); gap: 4px; }
   .hero-line1 { font-size: clamp(18px, 6vw, 32px); }
-  .hero-title-sub { font-size: clamp(16px, 6vw, 34px); }
+  .hero-title-sub { font-size: clamp(16px, 5.5vw, 34px); white-space: normal; word-break: normal; }
   #typewriter { font-size: clamp(18px, 6vw, 32px); }
   .cursor-blink { font-size: clamp(18px, 6vw, 32px); }
   .hero-desc { font-size: 14px; margin-bottom: 8px; }
