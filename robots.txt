@@ -1,6 +1,9 @@
-**
-```
 User-agent: *
 Allow: /
+Disallow: /Buisness Card/
+Disallow: /Presentation/
 
 Sitemap: https://vrindaai.com/sitemap.xml
+
+# VRINDA AI ANALYTICS — Data Analytics Agency Jamshedpur, Jharkhand, India
+# https://vrindaai.com
